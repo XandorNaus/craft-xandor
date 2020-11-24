@@ -1,0 +1,40 @@
+fieldLayouts:
+  6a967705-793d-4b47-a520-b05c61e1f5a3:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: newsCategories
+name: 'News Categories'
+siteSettings:
+  87598748-3216-4b2b-a86a-6e1d1b27f663:
+    hasUrls: true
+    template: news/_category
+    uriFormat: 'news/category/{slug}'
+structure:
+  maxLevels: 1
+  uid: 6a0eb6ca-b039-491b-895a-0d3be29d44f0

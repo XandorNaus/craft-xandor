@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: about
+name: About
+propagationMethod: all
+siteSettings:
+  87598748-3216-4b2b-a86a-6e1d1b27f663:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single

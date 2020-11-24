@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: news
+name: News
+propagationMethod: all
+siteSettings:
+  87598748-3216-4b2b-a86a-6e1d1b27f663:
+    enabledByDefault: true
+    hasUrls: true
+    template: news/_entry
+    uriFormat: 'news/{slug}'
+type: channel

@@ -1,0 +1,40 @@
+fieldLayouts:
+  f87f7c39-23bf-489a-95b9-2ba28c265de7:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: projectsCategories
+name: 'Projects Categories'
+siteSettings:
+  87598748-3216-4b2b-a86a-6e1d1b27f663:
+    hasUrls: true
+    template: projects/_category
+    uriFormat: 'projects-categories/{slug}'
+structure:
+  maxLevels: 1
+  uid: b2391b2f-3d58-4dc1-baa5-6835e8f41c47
