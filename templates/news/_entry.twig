@@ -1,0 +1,59 @@
+{% extends "layouts/app.twig" %}
+
+{% set featureImage = {
+    mode: 'crop',
+    width: 900,
+    height: 600,
+    quality: 90
+} %}
+
+{% block content %}
+    <div class="w-full py-56  shadow-2xl px-34 bg-cover w-full h-32 object-bottom" style="background-image: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+
+        <div class="container max-w-7xl mx-autor">
+        </div>
+
+    </div>
+
+    <section class="text-gray-700 body-font">
+    <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col
+            text-left  w-full mb-7">
+
+        <h1 class="sm:text-3xl text-2xl text-left font-bold text-pink title-font text-gray-900">{{ entry.title }}</h1>
+
+
+    <time class="text-sm block pb-4" datetime="{{ entry.postDate | date('Y-m-d') }}">{{ entry.postDate | date('d M Y') }}</time>
+
+
+    {# output transformed feature image(s) #}
+    {% if entry.featureImage | length %}
+        {% for image in entry.featureImage.all() %}
+            <img src="{{ image.getUrl(featureImage) }}" alt="{{ image.title }}" />
+        {% endfor %}
+    {% endif %}
+
+
+    {# render Matrix blocks for the “Post Content” field, passed as `blocks` #}
+    {% include "_includes/post-blocks" with { blocks: entry.postContent.all() } only %}
+
+        {# display post categories #}
+        {% if entry.postCategories|length %}
+            <div class="border-t py-2 mb-6">
+                {% for category in entry.postCategories.all() %}
+                    <a href="{{ category.url }}" class="inline-block border rounded px-2 py-1 text-sm">
+                        {{- category.title -}}
+                    </a>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+
+        <div>
+            <button href="/news" class="rounded bg-pink items-left  text-white px-4 py-3 no-underline text-pink transform motion-reduce:transform-none hover:-translate-y-1 hover:scale-110 transition ease-in-out duration-300 ...">
+                Ga terug naar overzicht
+            </button>
+        </div>
+
+{% endblock %}
+
